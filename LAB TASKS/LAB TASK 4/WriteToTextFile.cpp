@@ -5,7 +5,7 @@
 
  int main(){
 
-    of stream myfile("example.txt");
+    ofstream myfile("example.txt");
 
     if (myfile.is_open())
 
