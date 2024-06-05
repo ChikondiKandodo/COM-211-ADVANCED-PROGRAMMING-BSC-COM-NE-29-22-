@@ -1,13 +1,16 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 int main() {
-    ofstream myfile("example.txt");
+    string line;
+    ofstream myfile;
 
     if (myfile.is_open()) {
-        myfile << "This is a line.\n";
-        myfile << "This is another line.\n";
+        while (getline(myfile, line)) {
+            cout << line << '\n';
+        }
         myfile.close();
     }
     else {
